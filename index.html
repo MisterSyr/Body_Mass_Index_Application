@@ -7,8 +7,19 @@
     <link rel="stylesheet" href="styles.css" />
     <title>Body_Mass_Index_Application</title>
   </head>
+  <!-- body -->
   <body>
-    <div class="wrapper"></div>
+    <div class="wrapper">
+      <h3 id="info">Enter height (cm) amd weight (kg)</h3>
+      <p class="input">Height</p>
+      <input type="number" onfocus="this.value=''" id="height" />
+      <p class="input">Weight</p>
+      <input type="number" onfocus="this.value=''" id="weight" />
+      <!-- loader image -->
+      <div class="loader">
+        <img src="loader.gif" alt="" />
+      </div>
+    </div>
     <script src="script js"></script>
   </body>
 </html>
