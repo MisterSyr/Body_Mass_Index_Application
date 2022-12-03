@@ -7,3 +7,41 @@ body {
   background: url(background.jpg) no-repeat center center / cover;
   user-select: none;
 }
+
+.wrapper {
+  width: 500px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(247, 255, 255, 0.747);
+  /* opacity: 0.747; */
+  border-radius: 1 rem;
+  padding: 50px 20px;
+  box-shadow: 20px 50px 20px #000000;
+}
+
+h2 {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.input {
+  text-align: left;
+  margin-left: 120px;
+  color: #000000;
+  font-weight: bolder;
+}
+
+#height,
+#weight {
+  color: #000000;
+  text-align: left;
+  font-size: 20px;
+  font-weight: 200;
+  outline: none;
+  background: none;
+  border-bottom: 1px solid #a0a6a8;
+  border-right: 1px solid #a0a6a8;
+  width: 200px;
+}
