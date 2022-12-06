@@ -1,3 +1,7 @@
+// Event Listeners for button click
+// Calculate event listener
+document.querySelector(".calculate").addEventListener("click", BMI);
+
 // Functions [BMI calculation + Clear]
 
 // Calculate function
@@ -17,4 +21,12 @@ function BMI() {
   } else {
     alert("Error!");
   }
+}
+
+// Clear function
+function clear() {
+  document.getElementById("height").value = "";
+  document.getElementById("weight").value = "";
+  document.getElementById("output").value = "";
+  document.getElementById("state").value = "";
 }
