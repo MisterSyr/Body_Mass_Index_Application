@@ -1,6 +1,13 @@
 // Event Listeners for button click
 // Calculate event listener
-document.querySelector(".calculate").addEventListener("click", BMI);
+document.querySelector(".calculate").addEventListener("click", function () {
+  // hide output
+  document.getElementById("output").style.display = "none";
+
+  // show loader
+  document.querySelector(".loader").style.display = "block";
+  setTimeout(BMI, 2000);
+});
 
 // Clear event listener
 document.querySelector(".clear").addEventListener("click", Clear);
@@ -45,6 +52,9 @@ function BMI() {
       state.innerHTML =
         "<span style='color: #aC0392B';> 🍩🍩🍩 Obese Class III (Very Obese)!</span>";
     }
+    // Hide output and loader.
+    document.getElementById("output").style.display = "block";
+    document.querySelector(".loader").style.display = "block";
   } else {
     alert("Error!");
   }
