@@ -6,7 +6,7 @@ document.querySelector(".calculate").addEventListener("click", function () {
 
   // show loader
   document.querySelector(".loader").style.display = "block";
-  setTimeout(BMI, 2000);
+  setTimeout(BMI, 5000);
 });
 
 // Clear event listener
@@ -21,42 +21,57 @@ function BMI() {
   const weight = document.getElementById("weight").value;
 
   // BMI formula
-  let index = (weight / (((height / 100) * height) / 100)).toFixed(0);
+  let index = weight / (((height / 100) * height) / 100);
+  let index0 = index.toFixed(0);
 
   // condition to check if height and weight are not equal to Zero.
   if (height && weight != 0) {
     const output = document.getElementById("output");
     const state = document.getElementById("state");
-    output.innerHTML = "Your BMI is " + index;
-    if (index < 15) {
+    // console.log("Your BMI is " + index);
+    output.innerHTML = "Your BMI is " + index0;
+    if (index0 < 15) {
       state.innerHTML =
         "<span style='color: #d39103';> 🥦 Very Severly Underweight!";
-    } else if (index < 16) {
+    } else if (index0 < 16) {
       state.innerHTML =
         "<span style='color: #d39103';> 🥦🥦 Severly Underweight! </span>";
-    } else if (index < 18.5) {
+    } else if (index0 < 18.5) {
       state.innerHTML =
         "<span style='color: #d39103';> 🥦🥦🥦 Underweight! </span>";
-    } else if (index < 25) {
+    } else if (index0 < 25) {
       state.innerHTML =
         "<span style='color: #016901';> 🥙 Normal (Healthy Weight) </span>";
-    } else if (index < 30) {
+    } else if (index0 < 30) {
       state.innerHTML = "<span style='color: #a03403';> 🍟 Overweight!</span>";
-    } else if (index < 35) {
+    } else if (index0 < 35) {
       state.innerHTML =
         "<span style='color: #aC0392B';> 🍩 Obese Class I (Moderate Obese)!</span>";
-    } else if (index < 40) {
+    } else if (index0 < 40) {
       state.innerHTML =
         "<span style='color: #aC0392B';> 🍩🍩 Obese Class II (Severly Obese)!</span>";
-    } else if (index > 40) {
+    } else if (index0 > 40) {
       state.innerHTML =
         "<span style='color: #aC0392B';> 🍩🍩🍩 Obese Class III (Very Obese)!</span>";
     }
     // Hide output and loader.
     document.getElementById("output").style.display = "block";
-    document.querySelector(".loader").style.display = "block";
+    document.querySelector(".loader").style.display = "none";
   } else {
-    alert("Error!");
+    // Error massage
+    // alert("Error!");
+    Error();
+    function Error() {
+      document.getElementById("output").style.display = "block";
+      document.querySelector(".loader").style.display = "none";
+      document.getElementById("output").innerHTML =
+        "<span style='color:#ac1c09';>⚠️ Error: Enter height and weight first!";
+      // Settimeout method to hide the message after 5 seconds
+      setTimeout(() => {
+        document.getElementById("output").innerHTML = "";
+        document.querySelector(".state").innerHTML = "";
+      }, 5000);
+    }
   }
 }
 
