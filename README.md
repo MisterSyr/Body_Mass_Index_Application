@@ -52,7 +52,3 @@ A step by step series of examples that tell you how to get a development environ
 1. Download or clone the repository to your local machine.
 2. Open the index.html file in your web browser.
 3. You can now interact with the application and calculate your BMI.
-
-## Author
-
-This application was designed by Max. For any queries or further information, please contact the author.
