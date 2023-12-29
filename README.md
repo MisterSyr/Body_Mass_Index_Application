@@ -27,3 +27,32 @@ The application provides the following health status messages based on the calcu
 - **Obese Class I (Moderate Obese)**: BMI between 30 and 35
 - **Obese Class II (Severely Obese)**: BMI between 35 and 40
 - **Obese Class III (Very Severely Obese)**: BMI greater than 40
+
+## Technologies Used
+
+- HTML
+- CSS
+- JavaScript
+
+## Getting Started
+
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+
+### Prerequisites
+
+What things you need to install the software and how to install them:
+
+- A modern web-browser like Chrome, Firefox etc.
+- A text editor to edit HTML, CSS, and JavaScript files.
+
+### Installing
+
+A step by step series of examples that tell you how to get a development environment running:
+
+1. Download or clone the repository to your local machine.
+2. Open the index.html file in your web browser.
+3. You can now interact with the application and calculate your BMI.
+
+## Author
+
+This application was designed by Max. For any queries or further information, please contact the author.
